@@ -16,20 +16,18 @@ def make_overleaf_zips():
     brasnam_dir = PAPERS_DIR / "paper1_brasnam_sbc"
     brasnam_zip = PAPERS_DIR / "overleaf_brasnam_sbc.zip"
     with zipfile.ZipFile(brasnam_zip, 'w', zipfile.ZIP_DEFLATED) as z:
-        for f in ["main_brasnam.tex", "references.bib", "sbc-template.sty"]:
-            fp = brasnam_dir / f
-            if fp.exists():
-                z.write(fp, arcname=f)
+        for ext in ["*.tex", "*.bib", "*.sty", "*.png"]:
+            for fp in brasnam_dir.glob(ext):
+                z.write(fp, arcname=fp.name)
     print(f"[OK] Criado pacote Overleaf BRASNAM: {brasnam_zip} ({brasnam_zip.stat().st_size} bytes)")
 
     # 2. Elsevier OSNEM Zip
     osnem_dir = PAPERS_DIR / "paper2_elsevier_osnem"
     osnem_zip = PAPERS_DIR / "overleaf_elsevier_osnem.zip"
     with zipfile.ZipFile(osnem_zip, 'w', zipfile.ZIP_DEFLATED) as z:
-        for f in ["main_elsevier_osnem.tex", "references_osnem.bib"]:
-            fp = osnem_dir / f
-            if fp.exists():
-                z.write(fp, arcname=f)
+        for ext in ["*.tex", "*.bib", "*.png"]:
+            for fp in osnem_dir.glob(ext):
+                z.write(fp, arcname=fp.name)
     print(f"[OK] Criado pacote Overleaf OSNEM: {osnem_zip} ({osnem_zip.stat().st_size} bytes)")
 
 def create_github_documentation():
