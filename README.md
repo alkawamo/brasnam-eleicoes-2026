@@ -91,7 +91,7 @@ Contato: `kawamoto@utfpr.edu.br`
 
 ### 1. Clonar o repositório e instalar dependências
 ```bash
-git clone https://github.com/kawamoto-utfpr/brasnam-eleicoes-2026.git
+git clone https://github.com/alkawamo/brasnam-eleicoes-2026.git
 cd brasnam-eleicoes-2026
 pip install -r requirements.txt
 ```
