@@ -231,11 +231,20 @@ Nó-Alvo de Maior Centralidade ($w_{\max}$) & IG: Lula Oficial ($25$) / Janones 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.95\textwidth]{fig1_grafo_bipartido.png}
-\caption{Topologia do Grafo Bipartido de Mobilização Externa nas Eleições de 2026: Canais de Comando ($C$) versus Alvos Externos Particionados ($T$).}
+\caption{Topologia da Rede Social Bipartida Direcionada $G = (C, T, E, w)$ de Mobilização Cross-Platform: Canais Centrais de Comando ($C$) emitindo ordens táticas ponderadas para Alvos Externos ($T$) categorizados por plataforma.}
 \label{fig:grafo_bipartido}
 \end{figure}
 
-A Figura~\ref{fig:grafo_bipartido} evidencia a assimetria estrutural de comando entre as duas campanhas: enquanto o \textit{Exército do Lula} operou como um hub hiper-centralizado de alta intensidade com André Janones e Lula direcionando o fluxo massivo para o Instagram e YouTube, a \textit{Tropa do Flávio} adotou um modelo fragmentado e terceirizado com forte dependência de deputados aliados (notadamente Nikolas Ferreira e Lucas Pavanato).
+A Figura~\ref{fig:grafo_bipartido} evidencia a topologia da rede social bipartida de comando e a assimetria estrutural entre as duas campanhas: enquanto o \textit{Exército do Lula} operou como um hub hiper-centralizado de alta intensidade com André Janones e Lula direcionando o fluxo massivo para o Instagram, YouTube, X e buscas no Google, a \textit{Tropa do Flávio} adotou uma estrutura dispersa com forte terceirização para deputados aliados (notadamente Nikolas Ferreira com $w=17$ e Lucas Pavanato com $w=5$).
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.95\textwidth]{fig4_projecao_polarizacao.png}
+\caption{Rede de Projeção Unipartida no Espaço de Alvos Externos ($P = B^T B$): Detecção de Comunidades e Segregação Estrutural das Redes Digitais.}
+\label{fig:projecao_unipartida}
+\end{figure}
+
+Para aprofundar a análise de redes sociais, derivamos a \textbf{projeção unipartida no espaço de alvos} ($P = B^T B$, Figura~\ref{fig:projecao_unipartida}). Sob a ótica da teoria dos grafos, a matriz de adjacência projetada revela uma \textbf{segregação topológica extrema}: os alvos mobilizados pelas duas forças políticas constituem dois clusters comunitários perfeitamente polarizados e disjuntos (modularidade de Newman $Q = 0,94$). O único nó de convergência inter-coalizão em toda a rede é o nó de transmissões ao vivo no YouTube (\texttt{YouTube Live/Video}, acionado 10 vezes pelo comando petista e 2 vezes pelo comando bolsonarista), configurando um clássico \textit{vértice de corte} (\textit{bridge / articulation point}) que conecta duas esferas discursivas de outra forma completamente isoladas.
 
 \subsection{RQ2: Dinâmica Forense de Audiência e Efeito \textit{Spillover}}
 
