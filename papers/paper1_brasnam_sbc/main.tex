@@ -4,10 +4,19 @@
 \usepackage[T1]{fontenc}
 \usepackage[brazil,english]{babel}
 \usepackage{graphicx}
-\usepackage{url}
-\usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage[hyphens]{xurl}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue,
+    breaklinks=true
+}
 
 \title{``Ative o Sininho para Receber as Missões'': Topologia Bipartida, Reconstrução Forense de Audiência e Efeito \textit{Spillover} em Canais de Mobilização no WhatsApp nas Eleições de 2026}
 
@@ -47,7 +56,7 @@ Nas Eleições Presidenciais de 2026, disputadas em segundo turno entre Luiz In�
 
 Para mitigar a viralidade tóxica e o spam, a Meta projetou os Canais com as notificações automáticas (\textit{push notifications}) \textbf{silenciadas por padrão} na aba ``Atualizações''. Diante dessa fricção arquitetural deliberada, as coordenações de campanha desenvolveram táticas sofisticadas de engenharia social para contornar o bloqueio: tanto o ``Exército do Lula'' quanto a ``Tropa do Flávio'' instruíram seus seguidores, em suas descrições oficiais e postagens de boas-vindas, a \textit{``ativar o sininho de notificações''} para converter seguidores passivos em um exército móvel acionável em tempo real. Uma vez ativado o alerta, os canais passaram a operar como centros de comando e controle (\textit{Command \& Control --- C2}) sincronizados, capazes de disparar milhões de usuários para executar ações orquestradas fora do WhatsApp.
 
-Com a Resolução nº 23.610 do Tribunal Superior Eleitoral (TSE), atualizada para o pleito de 2026, os canais oficiais de campanha passaram a exigir registro obrigatório no repositório público \texttt{DivulgaCandContas}, tornando os dois canais centrais --- \textbf{``EXÉRCITO DO LULA''} (\texttt{0029VbCbRfD7tkj88k3soZ0Y}, atingindo $10$ milhões de seguidores) e \textbf{``TROPA DO FLÁVIO''} (\texttt{0029Vb8kT6E3AzNNDpBkN22J}, atingindo $2,0$ milhões de seguidores) --- objetos empíricos primordiais para a ciência de redes.
+Com a Resolução nº 23.610 do Tribunal Superior Eleitoral (TSE), atualizada para o pleito de 2026, os canais oficiais de campanha passaram a exigir registro obrigatório no repositório público \textit{DivulgaCandContas}, tornando os dois canais centrais --- \textbf{``EXÉRCITO DO LULA''} (ID: \path{0029VbCbRfD7tkj88k3soZ0Y}, atingindo $10$ milhões de seguidores) e \textbf{``TROPA DO FLÁVIO''} (ID: \path{0029Vb8kT6E3AzNNDpBkN22J}, atingindo $2,0$ milhões de seguidores) --- objetos empíricos primordiais para a ciência de redes.
 
 A opção metodológica por analisar os Canais de WhatsApp --- em detrimento de veículos da imprensa tradicional, portais jornalísticos ou canais de notícias no YouTube --- fundamenta-se na distinção estrutural entre \textbf{mediação jornalística} e \textbf{comando operacional direto}: enquanto órgãos de imprensa possuem mediação, checagem e linhas editoriais próprias, os Canais do WhatsApp constituem a infraestrutura proprietária e pura de comando e controle (\textit{C2}) das campanhas, operando com entrega cronológica determinística (sem filtros algorítmicos opacos de recomendação). Sob a ótica da teoria de redes, os canais de WhatsApp representam os \textbf{nós emissores} da ação política, ao passo que o YouTube, o X e o Instagram configuram os \textbf{nós de destino} onde as missões se materializam. Ademais, delimitamos a observação empírica a uma janela longitudinal de 14 dias contínuos (336 horas ininterruptas, de 17 a 30 de outubro de 2026 às 23h59 BRT), integrando o clímax da disputa de 2º turno e o período crítico de 120 horas pós-eleitoral, garantindo que o ciclo de mobilização seja observado até sua exaustão operacional, sem contaminar os dados com a rotina governamental subsequente.
 
@@ -119,19 +128,23 @@ A delimitação sobre os \textit{WhatsApp Channels} em detrimento de canais jorn
 \begin{itemize}
     \item \textit{Critérios de Inclusão:} Foram incluídas na íntegra todas as mensagens de texto, hiperlinks, hashtags, mídias e vetores de reações emitidas pelas contas oficiais de campanha registradas na Justiça Eleitoral durante a janela de observação;
     \item \textit{Exclusão de Grupos Conversacionais Fechados:} Grupos de chat (256/1.024 membros) foram deliberadamente excluídos para assegurar estrita conformidade com a LGPD (Art. 7º e 11 da Lei 13.709/2018), impedindo a captura de números de telefone e dados privados de cidadãos comuns, e por pertencerem a uma topologia horizontal dispersa, distinta do fenômeno de transmissão em massa unidirecional;
-    \item \textit{Exclusão de Canais Apócrifos:} Canais não oficiais ou não registrados no \texttt{DivulgaCandContas} do TSE foram excluídos para garantir a validade causal da atribuição de comando às coligações partidárias;
+    \item \textit{Exclusão de Canais Apócrifos:} Canais não oficiais ou não registrados no repositório oficial \textit{DivulgaCandContas} do TSE foram excluídos para garantir a validade causal da atribuição de comando às coligações partidárias;
     \item \textit{Exclusão de Iniciativas Sociais Periféricas:} Interações comunitárias lúdicas surgidas na militância após a proclamação do resultado (como redes de confraternização afetiva) foram descartadas da modelagem de missões por não constituírem atos de comando político estratégico.
 \end{itemize}
 
 \subsection{Coleta de Dados e Conformidade Ética (LGPD e Resolução TSE nº 23.610)}
 A captura empírica dos dados operou estritamente sobre os canais públicos oficiais devidamente registrados perante a Justiça Eleitoral:
 \begin{itemize}
-    \item \textbf{EXÉRCITO DO LULA} (\texttt{0029VbCbRfD7tkj88k3soZ0Y}): canal oficial central de mobilização da campanha lulista, administrado operacionalmente pelo deputado federal André Janones;
-    \item \textbf{TROPA DO FLÁVIO} (\texttt{0029Vb8kT6E3AzNNDpBkN22J}): canal oficial central da campanha bolsonarista, articulado pela equipe de comunicação de Flávio Bolsonaro e parlamentares aliados;
-    \item Canais satélites correlacionados divulgados como alvos oficiais: \textit{Canal Oficial do Lula} (\texttt{0029VaDH1GU7DAWpJTrCXH39}) e \textit{Nikolas Ferreira - Oficial} (\texttt{0029VbDNtfo4o7qVYbwemy1f}).
+    \item \textbf{EXÉRCITO DO LULA} (ID: \path{0029VbCbRfD7tkj88k3soZ0Y}): canal oficial central de mobilização da campanha lulista, administrado operacionalmente pelo deputado federal André Janones;
+    \item \textbf{TROPA DO FLÁVIO} (ID: \path{0029Vb8kT6E3AzNNDpBkN22J}): canal oficial central da campanha bolsonarista, articulado pela equipe de comunicação de Flávio Bolsonaro e parlamentares aliados;
+    \item Canais satélites correlacionados divulgados como alvos oficiais:
+    \begin{itemize}
+        \item \textit{Canal Oficial do Lula} (ID: \path{0029VaDH1GU7DAWpJTrCXH39});
+        \item \textit{Nikolas Ferreira - Oficial} (ID: \path{0029VbDNtfo4o7qVYbwemy1f}).
+    \end{itemize}
 \end{itemize}
 
-Desenvolvemos um coletor automatizado injetado no ambiente do WhatsApp Web (\texttt{whatsapp\_channel\_extractor.js}). O script executa rolagem programada retroativa sobre a árvore DOM, parseando e extraindo os seguintes campos por mensagem: (i) identificador único de mensagem criptográfico (\texttt{msgId}); (ii) marcação temporal UTC e local BRT; (iii) corpo textual integral; (iv) metadados de links externos e atributos de pré-visualização (\textit{OpenGraph cards}); (v) presença de mídias e rótulos de integridade (como badges de conteúdo sintético/IA); e (vi) o vetor estruturado dos quatro emojis com maior contagem de reações.
+Desenvolvemos um coletor automatizado injetado no ambiente do WhatsApp Web (\path{whatsapp_channel_extractor.js}). O script executa rolagem programada retroativa sobre a árvore DOM, parseando e extraindo os seguintes campos por mensagem: (i) identificador único de mensagem criptográfico (\texttt{msgId}); (ii) marcação temporal UTC e local BRT; (iii) corpo textual integral; (iv) metadados de links externos e atributos de pré-visualização (\textit{OpenGraph cards}); (v) presença de mídias e rótulos de integridade (como badges de conteúdo sintético/IA); e (vi) o vetor estruturado dos quatro emojis com maior contagem de reações.
 
 \paragraph{Conformidade com a LGPD e Ética em Pesquisa:}
 Por se tratarem de canais de difusão unidirecional estritamente públicos e de campanha política registrada perante a Justiça Eleitoral, os dados não contêm números de telefone, fotos de perfil ou identificadores pessoais de cidadãos comuns ou membros da base. Assim, o processo atende plenamente às diretrizes éticas da Sociedade Brasileira de Computação (SBC) e à Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
@@ -158,13 +171,13 @@ A partir da matriz de incidência bipartida $B_{|C| \times |T|}$, derivamos a pr
 \subsection{O Método Forense: Reconstrução por \textit{Frozen OpenGraph Link Previews}}
 Uma limitação central para pesquisadores do WhatsApp é a ausência de uma API pública para extração da evolução diária do número de seguidores $S_c(t)$ de um determinado canal $c$. No entanto, identificamos e formalizamos uma vulnerabilidade arquitetural de cache no ecossistema da Meta:
 
-Sempre que um administrador posta uma mensagem contendo uma URL para um canal do WhatsApp (\texttt{https://whatsapp.com/channel/<ID>}) no instante temporal $t_k$, os servidores da Meta consultam o endpoint da API interna de metadados e renderizam um cartão de pré-visualização (\textit{OpenGraph Link Preview}) que é transmitido e gravado estaticamente no corpo da mensagem:
+Sempre que um administrador posta uma mensagem contendo uma URL para um canal do WhatsApp (\path{https://whatsapp.com/channel/<CANAL_ID>}) no instante temporal $t_k$, os servidores da Meta consultam o endpoint da API interna de metadados e renderizam um cartão de pré-visualização (\textit{OpenGraph Link Preview}) que é transmitido e gravado estaticamente no corpo da mensagem:
 \begin{equation}
 \text{Card}(c, t_k) \equiv \left\langle \text{Título}, \text{Ícone}, \hat{S}_c(t_k) \right\rangle
 \end{equation}
 onde $\hat{S}_c(t_k)$ é a string imutável contendo o número exato de seguidores registrado pelo servidor no milissegundo de geração do card (e.g., \texttt{"Canal - 5,8 mi seguidores"}).
 
-Enquanto a interface gráfica do WhatsApp atualiza dinamicamente o número total de seguidores no cabeçalho superior do canal conforme a data presente $S_c(t_{\text{atual}})$, o cartão embutido no histórico de mensagens permanece \textbf{congelado no tempo} (\textit{Frozen Preview}). Consequentemente, ao aplicar expressões regulares forenses sobre a coleção de mensagens passadas que compartilharam convites para o próprio canal ou para canais parceiros, é possível recuperar pontos históricos $\hat{S}_c(t_k)$ retroativamente. Combinamos essa extração forense com um coletor automatizado horário de monitoramento ativo (\texttt{monitor\_followers.py}) para reconstruir a curva contínua de seguidores e aferir quantitativamente o efeito de transferência de audiência (\textit{Cross-Channel Spillover}):
+Enquanto a interface gráfica do WhatsApp atualiza dinamicamente o número total de seguidores no cabeçalho superior do canal conforme a data presente $S_c(t_{\text{atual}})$, o cartão embutido no histórico de mensagens permanece \textbf{congelado no tempo} (\textit{Frozen Preview}). Consequentemente, ao aplicar expressões regulares forenses sobre a coleção de mensagens passadas que compartilharam convites para o próprio canal ou para canais parceiros, é possível recuperar pontos históricos $\hat{S}_c(t_k)$ retroativamente. Combinamos essa extração forense com um coletor automatizado horário de monitoramento ativo (\path{monitor_followers.py}) para reconstruir a curva contínua de seguidores e aferir quantitativamente o efeito de transferência de audiência (\textit{Cross-Channel Spillover}):
 \begin{equation}
 \text{Spillover}(c_{\text{origem}} \rightarrow c_{\text{alvo}}) = \frac{S_{c_{\text{alvo}}}(t_{\text{após}}) - S_{c_{\text{alvo}}}(t_{\text{antes}})}{S_{c_{\text{alvo}}}(t_{\text{antes}})} \times 100\%
 \end{equation}
@@ -183,39 +196,38 @@ Para categorizar o repertório operacional dos canais de comando, elaboramos uma
 \end{enumerate}
 
 % =========================================================================
-% SEÇÃO 4: RESULTADOS EMPÍRICOS (PLACEHOLDERS ESTRUTURADOS)
+% SEÇÃO 4: RESULTADOS EMPÍRICOS
 % =========================================================================
 \section{Resultados Empíricos}\label{sec:resultados}
 
-% [PLACEHOLDER GERAL DOS RESULTADOS]
-% Esta seção será integralmente preenchida com as métricas definitivas consolidadas ao término
-% da janela pós-eleitoral de 120 horas (sexta-feira, 30/10/2026 às 23:59 BRT).
+Apresentamos os resultados empíricos derivados do dataset longitudinal consolidado cobrindo o período de 17 a 30 de outubro de 2026 ($N=1.331$ mensagens), estruturados pelas três questões de pesquisa formuladas.
 
 \subsection{RQ1: Topologia de Comando e Grafo Bipartido Cross-Platform}
 
-% [PLACEHOLDER TABELA 1: SÍNTESE COMPARATIVA ESTRUTURAL DOS CANAIS]
-% A Tabela 1 apresentará o sumário longitudinal definitivo com a distribuição final de mensagens,
-% links externos disparados, alvos externos mais acionados e centralidade de grau.
+A Tabela~\ref{tab:resumo_consolidado} sintetiza as dimensões estruturais e operacionais dos dois canais oficiais analisados.
+
 \begin{table}[htb]
 \centering
+\small
 \caption{Síntese Estrutural Comparativa dos Canais de Comando no WhatsApp (Janela Longitudinal Consolidada de 17/10 a 30/10/2026, $N=1.331$).}
 \label{tab:resumo_consolidado}
-\begin{tabular}{@{}lcc@{}}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}p{5.0cm}p{5.5cm}p{5.5cm}@{}}
 \toprule
 \textbf{Métrica / Dimensão de Rede} & \textbf{EXÉRCITO DO LULA} & \textbf{TROPA DO FLÁVIO} \\ \midrule
-ID Único do Canal & \texttt{0029VbCbRfD7tkj88k3soZ0Y} & \texttt{0029Vb8kT6E3AzNNDpBkN22J} \\
-Audiência Final Auditada & $10.000.000$ inscritos & $1.900.000\text{ inscritos (queda de } -200\text{k / } -9,5\%)$ \\
+ID Único do Canal & \path{0029VbCbRfD7tkj88k3soZ0Y} & \path{0029Vb8kT6E3AzNNDpBkN22J} \\
+Audiência Final Auditada & $10.000.000$ inscritos & $1.900.000$ inscritos ($-200\text{k} / -9,5\%$) \\
 Arquitetura de Comando & Hub Personalista Hiper-Centralizado & Coalizão de Multi-Influenciadores \\
 Total de Mensagens Analisadas ($N$) & $1.182$ & $149$ \\
 Links Externos Disparados ($|E_{\text{link}}|$) & $160$ & $41$ \\
 Hashtags Coordenadas no X & $123$ ($134$ missões) & $3$ ($4$ missões) \\
-Campanhas de Google Bombing & $4\text{ ondas explícitas (7 disparos)}$ & $0\text{ campanhas}$ \\
+Campanhas de \textit{Google Bombing} & $4$ ondas explícitas ($7$ disparos) & $0$ campanhas \\
 Plataforma Externa Primária & Instagram ($109$), WA ($14$), X ($12$) & Instagram ($32$), X ($3$), YT ($2$) \\
-Nó-Alvo de Maior Centralidade ($w_{\max}$) & \texttt{IG: Lula Oficial} ($25$) / \texttt{Janones} ($19$) & \texttt{IG: Nikolas Ferreira} ($17$) \\ \bottomrule
-\end{tabular}
+Nó-Alvo de Maior Centralidade ($w_{\max}$) & IG: Lula Oficial ($25$) / Janones ($19$) & IG: Nikolas Ferreira ($17$) \\ \bottomrule
+\end{tabular}%
+}
 \end{table}
 
-% FIGURA 1: PROJEÇÃO DO GRAFO BIPARTIDO
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.95\textwidth]{fig1_grafo_bipartido.png}
@@ -227,7 +239,6 @@ A Figura~\ref{fig:grafo_bipartido} evidencia a assimetria estrutural de comando 
 
 \subsection{RQ2: Dinâmica Forense de Audiência e Efeito \textit{Spillover}}
 
-% FIGURA 2: CURVAS DE CRESCIMENTO E SPILLOVER
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.95\textwidth]{fig2_spillover_crescimento.png}
@@ -239,7 +250,6 @@ A partir do método de \textit{Frozen OpenGraph Link Previews} (Figura~\ref{fig:
 
 \subsection{RQ3: Assinatura Afetiva e Vetores de Emojis}
 
-% FIGURA 3: ASSINATURA EMOCIONAL DE EMOJIS
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.95\textwidth]{fig3_radar_emojis.png}
@@ -247,27 +257,42 @@ A partir do método de \textit{Frozen OpenGraph Link Previews} (Figura~\ref{fig:
 \label{fig:radar_emojis}
 \end{figure}
 
-A assinatura de reações (Figura~\ref{fig:radar_emojis}) ilustra o enquadramento psicológico das bases: a continência militar (\textit{salute emoji}, U+1FAE1) surgiu como marcador de obediência e disciplina estritamente exclusivo do \textit{Exército do Lula} ($61,3\%$ das postagens vs. $0,0\%$ na oposição), enquanto a \textit{Tropa do Flávio} registrou preponderância desproporcional de deboche (\textit{laugh/tears emoji}, U+1F602, $41,6\%$ vs. $16,2\%$) e lamento/choro (\textit{crying emoji}, U+1F622, $12,1\%$ vs. $3,0\%$).
+A assinatura de reações (Figura~\ref{fig:radar_emojis}) ilustra o enquadramento psicológico das bases: a continência militar (\textit{salute emoji, U+1FAE1}) surgiu como marcador de obediência e disciplina estritamente exclusivo do \textit{Exército do Lula} ($61,3\%$ das postagens vs. $0,0\%$ na oposição), enquanto a \textit{Tropa do Flávio} registrou preponderância desproporcional de deboche (\textit{laugh/tears emoji, U+1F602}, $41,6\%$ vs. $16,2\%$) e lamento/choro (\textit{crying emoji, U+1F622}, $12,1\%$ vs. $3,0\%$).
 
 % =========================================================================
-% SEÇÃO 5: DISCUSSÃO E IMPLICAÇÕES REGULATÓRIAS (PLACEHOLDER ESTRUTURADO)
+% SEÇÃO 5: DISCUSSÃO E IMPLICAÇÕES REGULATÓRIAS
 % =========================================================================
 \section{Discussão e Implicações Regulatórias}\label{sec:discussao}
 
-\noindent \textit{[PLACEHOLDER DISCUSSÃO: Discussão teórica cruzando os achados empíricos com o debate sobre governança de plataformas, o impacto da atuação preventiva do TSE sobre o silenciamento de canais pré-eleição, o uso de escassez artificial para recrutamento (\textit{fear of missing out}) e a tensão entre entrega cronológica determinística vs. filtros algorítmicos opaques de feeds.]}
+Os achados empíricos deste estudo revelam transformações profundas na ecologia da comunicação política digital, que podem ser examinadas sob três eixos analíticos fundamentais:
+
+\subsection{A Fricção Arquitetural do WhatsApp e a Tática do ``Sininho''}
+A concepção original dos Canais de WhatsApp pela Meta como ambientes silenciados por padrão reflete uma tentativa deliberada de introduzir atrito cognitivo (\textit{friction by design}) para mitigar os efeitos deletérios da viralidade tóxica observada em 2018. Todavia, nossos dados demonstram que as campanhas contornaram essa salvaguarda por meio de engenharia social focada em escassez e urgência (\textit{Fear of Missing Out --- FOMO}). Ao condicionar o recebimento imediato das ``missões secretas'' à ativação voluntária do sininho, os operadores restauraram a capacidade de mobilização em tempo real de milhões de militantes diretamente na tela de bloqueio do smartphone. Essa conversão de seguidores passivos em nós executores contorna a moderação algorítmica de plataformas abertas, permitindo uma comunicação imune aos filtros de visibilidade do Instagram ou do TikTok.
+
+\subsection{Assimetria Estrutural e o Colapso Operacional Pós-Derrota}
+A assimetria no volume de mensagens ($1.182$ no \textit{Exército do Lula} contra $149$ na \textit{Tropa do Flávio}) reflete doutrinas operacionais distintas. Enquanto o lulismo adotou um modelo de comando personalista hiperativo liderado por André Janones — com disparos contínuos ao longo de todo o dia e intervenção agressiva em motores de busca —, a campanha bolsonarista operou como uma coalizão descentralizada de influenciadores (notadamente Nikolas Ferreira). Essa dependência de terceiros revelou-se estruturalmente frágil: com a proclamação da vitória de Lula em 25 de outubro às 18h22 BRT, a \textit{Tropa do Flávio} sofreu um congelamento operacional absoluto, não emitindo uma única mensagem durante os 5 dias subsequentes. Essa paralisia causou uma desidratação imediata da audiência, resultando na perda de $200.000$ seguidores ($-9,5\%$ de \textit{subscriber churn}). Em contrapartida, o canal governista converteu sua audiência de 10 milhões em um ativo perene de sustentação política.
+
+\subsection{Manipulação de Busca (\textit{Google Bombing}) e Limites Regulatórios}
+Um dos achados mais críticos deste estudo foi a orquestração de quatro campanhas coordenadas de manipulação algorítmica de motores de busca (\textit{Google Bombing}). Comandos sem link instruíam os seguidores a digitar repetidamente termos específicos (e.g., termos associados a processos judiciais ou denúncias de adversários) no Google para inflar a relevância algorítmica e forçar o preenchimento automático das sugestões de pesquisa. Embora a Resolução TSE nº 23.610/2026 tenha avançado ao exigir o registro formal de canais no repositório \textit{DivulgaCandContas} e vedar o impulsionamento desinformativo, ela revelou-se ineficaz para coibir a emissão de ordens táticas que induzem os usuários a atuar organicamente fora da plataforma de mensageria. Essa zona cinzenta normativa demanda que a governança eleitoral estenda sua fiscalização da mediação de conteúdo para a coordenação comportamental induzida.
 
 % =========================================================================
-% SEÇÃO 6: CONCLUSÕES E TRABALHOS FUTUROS (PLACEHOLDER ESTRUTURADO)
+% SEÇÃO 6: CONCLUSÕES E TRABALHOS FUTUROS
 % =========================================================================
 \section{Conclusões e Trabalhos Futuros}\label{sec:conclusoes}
 
-\noindent \textit{[PLACEHOLDER CONCLUSÕES: Síntese conclusiva das três contribuições do trabalho, reafirmando a validação metodológica da extração por OpenGraph e os achados estruturais da topologia bipartida de comando em mensageria privada. Apontamento de trabalhos futuros voltados para a análise de redes multimodais (áudios e vídeos) e testes causais de intervenção algorítmica em larga escala.]}
+Neste trabalho, apresentamos a primeira investigação empírica sobre a arquitetura de comando e mobilização dos Canais do WhatsApp nas Eleições Presidenciais de 2026. A formalização do modelo de grafo bipartido direcionado cross-platform permitiu desvelar como os canais operam como emissores de ordens táticas de grande escala para plataformas externas. Além disso, propusemos e validamos a metodologia forense de \textbf{Cartões OpenGraph Congelados (\textit{Frozen Link Previews})}, estabelecendo uma via viável para reconstruir séries temporais de seguidores e mensurar a transferência de audiência (\textit{spillover} de $+26,9\%$) na ausência de APIs oficiais.
+
+A caracterização psicossocial a partir de vetores de emojis demonstrou que as coalizões utilizam o repertório de reações como rituais de fidelização e coesão militarizada (continência militar em $61,3\%$ das postagens governistas versus deboche na oposição). Como trabalhos futuros, pretendemos: (i) expandir a modelagem para a mineração multimodal de conteúdos de áudio e vídeo por transcrição computacional automática; (ii) quantificar a causalidade temporal entre os disparos de comando no WhatsApp e picos de audiência no Instagram e YouTube através de modelagem autorregressiva vetorial; e (iii) investigar a perenidade dos canais governamentais ao longo da transição de poder.
 
 % =========================================================================
 % DISPONIBILIDADE DE DADOS E CÓDIGO (CIÊNCIA ABERTA)
 % =========================================================================
 \section*{Disponibilidade de Dados e Código (Ciência Aberta)}
-Alinhado às diretrizes de Ciência Aberta e reprodutibilidade científica (princípios FAIR), o dataset longitudinal consolidado ($N=1.331$ mensagens), os scripts de extração do DOM, o dicionário de variáveis (\textit{codebook}) e um \textbf{pipeline interativo no Google Colab} (permitindo a replicação direta de todos os gráficos e modelos na nuvem sem necessidade de instalação local) estão disponíveis para a comunidade acadêmica. Para assegurar a estrita conformidade com o processo de \textbf{revisão duplo-cega (\textit{double-blind review})}, os artefatos foram anonimizados e disponibilizados através de um espelho cego em: \url{https://anonymous.4open.science/r/brasnam-eleicoes-2026-anon}. O repositório oficial definitivo no GitHub será divulgado e tornado público na versão final (\textit{camera-ready}) após a conclusão da avaliação pelos pares.
+Alinhado às diretrizes de Ciência Aberta e reprodutibilidade científica (princípios FAIR), o dataset longitudinal consolidado ($N=1.331$ mensagens), os scripts de extração do DOM, o dicionário de variáveis (\textit{codebook}) e um \textbf{pipeline interativo no Google Colab} (permitindo a replicação direta de todos os gráficos e modelos na nuvem sem necessidade de instalação local) estão disponíveis para a comunidade acadêmica. Para assegurar a estrita conformidade com o processo de \textbf{revisão duplo-cega (\textit{double-blind review})}, os artefatos foram anonimizados e disponibilizados através de um repositório cego em:
+\begin{center}
+\url{https://anonymous.4open.science/r/brasnam-eleicoes-2026-anon}
+\end{center}
+O repositório oficial definitivo no GitHub será divulgado e tornado público na versão final (\textit{camera-ready}) após a conclusão da avaliação pelos pares.
 
 % =========================================================================
 % AGRADECIMENTOS E BIBLIOGRAFIA
