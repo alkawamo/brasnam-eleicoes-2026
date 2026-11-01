@@ -162,7 +162,7 @@ Sempre que um administrador posta uma mensagem contendo uma URL para um canal do
 \begin{equation}
 \text{Card}(c, t_k) \equiv \left\langle \text{Título}, \text{Ícone}, \hat{S}_c(t_k) \right\rangle
 \end{equation}
-onde $\hat{S}_c(t_k)$ é a string imutável contendo o número exato de seguidores registrado pelo servidor no milissegundo de geração do card (e.g., \texttt{"Canal • 5,8 mi seguidores"}).
+onde $\hat{S}_c(t_k)$ é a string imutável contendo o número exato de seguidores registrado pelo servidor no milissegundo de geração do card (e.g., \texttt{"Canal - 5,8 mi seguidores"}).
 
 Enquanto a interface gráfica do WhatsApp atualiza dinamicamente o número total de seguidores no cabeçalho superior do canal conforme a data presente $S_c(t_{\text{atual}})$, o cartão embutido no histórico de mensagens permanece \textbf{congelado no tempo} (\textit{Frozen Preview}). Consequentemente, ao aplicar expressões regulares forenses sobre a coleção de mensagens passadas que compartilharam convites para o próprio canal ou para canais parceiros, é possível recuperar pontos históricos $\hat{S}_c(t_k)$ retroativamente. Combinamos essa extração forense com um coletor automatizado horário de monitoramento ativo (\texttt{monitor\_followers.py}) para reconstruir a curva contínua de seguidores e aferir quantitativamente o efeito de transferência de audiência (\textit{Cross-Channel Spillover}):
 \begin{equation}
@@ -247,7 +247,7 @@ A partir do método de \textit{Frozen OpenGraph Link Previews} (Figura~\ref{fig:
 \label{fig:radar_emojis}
 \end{figure}
 
-A assinatura de reações (Figura~\ref{fig:radar_emojis}) ilustra o enquadramento psicológico das bases: a continência militar (\texttt{🫡}) surgiu como marcador de obediência e disciplina estritamente exclusivo do \textit{Exército do Lula} ($61,3\%$ das postagens vs. $0,0\%$ na oposição), enquanto a \textit{Tropa do Flávio} registrou preponderância desproporcional de deboche (\texttt{😂}, $41,6\%$ vs. $16,2\%$) e lamento/choro (\texttt{😢}, $12,1\%$ vs. $3,0\%$).
+A assinatura de reações (Figura~\ref{fig:radar_emojis}) ilustra o enquadramento psicológico das bases: a continência militar (\textit{salute emoji}, U+1FAE1) surgiu como marcador de obediência e disciplina estritamente exclusivo do \textit{Exército do Lula} ($61,3\%$ das postagens vs. $0,0\%$ na oposição), enquanto a \textit{Tropa do Flávio} registrou preponderância desproporcional de deboche (\textit{laugh/tears emoji}, U+1F602, $41,6\%$ vs. $16,2\%$) e lamento/choro (\textit{crying emoji}, U+1F622, $12,1\%$ vs. $3,0\%$).
 
 % =========================================================================
 % SEÇÃO 5: DISCUSSÃO E IMPLICAÇÕES REGULATÓRIAS (PLACEHOLDER ESTRUTURADO)
