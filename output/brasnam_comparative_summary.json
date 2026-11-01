@@ -1,0 +1,160 @@
+[
+  {
+    "channel": "EXÉRCITO DO LULA",
+    "total_messages": 1182,
+    "dates_covered": {
+      "17/10/2026": 36,
+      "18/10/2026": 279,
+      "19/10/2026": 14,
+      "20/10/2026": 73,
+      "21/10/2026": 74,
+      "22/10/2026": 85,
+      "23/10/2026": 119,
+      "24/10/2026": 113,
+      "25/10/2026": 57,
+      "26/10/2026": 28,
+      "27/10/2026": 32,
+      "28/10/2026": 22,
+      "29/10/2026": 14,
+      "30/10/2026": 1,
+      "31/12/1969": 1
+    },
+    "total_links_shared": 160,
+    "total_hashtags_dispatched": 123,
+    "ai_content_labels_detected": 0,
+    "unique_hashtags": {
+      "#ExercitoDoLula": 6,
+      "#lula": 3,
+      "#Janones": 2,
+      "#Folha": 2,
+      "#PraTodosVerem": 2,
+      "#Eleições2026": 2,
+      "#Lula": 2,
+      "#NordestinosComLula": 2,
+      "#AbreOSigiloFlavio": 2,
+      "#RespondeOLulaFlavio": 2,
+      "#LulaDandoShowNaBand": 2,
+      "#GloboNews": 2,
+      "#JornalOGlobo": 2,
+      "#g1": 2,
+      "#janones": 2,
+      "#HojeTemShowDoLula": 1,
+      "#NinguemCalaNossoExercito": 1,
+      "#ExercitoDoLulaVenceuMaisUma": 1,
+      "#LeandraLealEmocionou": 1,
+      "#LulaVaiVirar": 1
+    },
+    "top_external_targets": {
+      "IG: Luiz Inácio Lula da Silva": 25,
+      "IG: André Janones": 19,
+      "WA: Exército do Lula (Auto-Link)": 10,
+      "YouTube Live/Video": 10,
+      "IG: @lulaoficial": 8,
+      "Google Search Bombing": 7,
+      "Facebook Page": 7,
+      "Tag: #ExercitoDoLula": 6,
+      "IG: Movimento 342 Artes | Cultura e Democracia": 4,
+      "WA: Canal Oficial do Lula": 4,
+      "X: @andrejanonesmg": 4,
+      "IG: EXÉRCITO DO LULA": 4,
+      "Tag: #lula": 3,
+      "IG: Folha de S.Paulo": 3,
+      "IG: @andrejanones": 3
+    },
+    "mission_breakdown": {
+      "Comando Interno / Engajamento Moral da Tropa": 816,
+      "Batalha de Hashtags (Trending Topics X)": 134,
+      "Difusão de Conteúdo Cross-Platform": 91,
+      "Brigading / Mutirão de Engajamento (IG/YT/X)": 60,
+      "Mobilização Sincronizada (Live / Debate / Ato)": 43,
+      "Recrutamento e Ativação de Notificações (Push)": 22,
+      "Contra-Ataque / Narrativa de Censura ou Fake News": 9,
+      "Google Bombing (Manipulação de Busca)": 7
+    },
+    "platform_targets": {
+      "Instagram": 109,
+      "WhatsApp Channel": 14,
+      "X (Twitter)": 12,
+      "YouTube": 10,
+      "Portal / Site Externo": 8,
+      "Facebook": 7
+    },
+    "top_emojis_frequency": {
+      "❤": 836,
+      "👍": 823,
+      "🫡": 724,
+      "🙏": 433,
+      "😂": 192,
+      "😮": 89,
+      "💪": 45,
+      "👏": 44,
+      "💥": 35,
+      "😢": 35
+    }
+  },
+  {
+    "channel": "TROPA DO FLÁVIO 🇧🇷",
+    "total_messages": 149,
+    "dates_covered": {
+      "18/10/2026": 5,
+      "19/10/2026": 18,
+      "20/10/2026": 25,
+      "21/10/2026": 13,
+      "22/10/2026": 12,
+      "23/10/2026": 20,
+      "24/10/2026": 12,
+      "25/10/2026": 3
+    },
+    "total_links_shared": 41,
+    "total_hashtags_dispatched": 3,
+    "ai_content_labels_detected": 3,
+    "unique_hashtags": {
+      "#naoCalemOsNordestino": 1,
+      "#FalaNordeste": 1,
+      "#ProsperaNordeste": 1
+    },
+    "top_external_targets": {
+      "IG: Nikolas Ferreira": 17,
+      "IG: Lucas Pavanato": 5,
+      "IG: Gustavo Gayer": 3,
+      "X: @claudio_dantas_": 2,
+      "YouTube Live/Video": 2,
+      "Site: fiscaisdopl.com.br": 2,
+      "IG: Partido Liberal | PL22": 1,
+      "IG: PILHADO": 1,
+      "IG: IG: Reel/Post": 1,
+      "Tag: #naoCalemOsNordestino": 1,
+      "Tag: #FalaNordeste": 1,
+      "Tag: #ProsperaNordeste": 1,
+      "IG: Rubel": 1,
+      "WA: Nikolas Ferreira - Oficial": 1,
+      "IG: nikolasferreiradm": 1
+    },
+    "mission_breakdown": {
+      "Comando Interno / Engajamento Moral da Tropa": 93,
+      "Difusão de Conteúdo Cross-Platform": 33,
+      "Brigading / Mutirão de Engajamento (IG/YT/X)": 5,
+      "Contra-Ataque / Narrativa de Censura ou Fake News": 5,
+      "Batalha de Hashtags (Trending Topics X)": 4,
+      "Mobilização Sincronizada (Live / Debate / Ato)": 3,
+      "Mídia Sintética (Rotulada 'Conteúdo de IA')": 3,
+      "Mobilização Offline / Fiscais de Urna": 2,
+      "Recrutamento e Ativação de Notificações (Push)": 1
+    },
+    "platform_targets": {
+      "Instagram": 32,
+      "X (Twitter)": 3,
+      "YouTube": 2,
+      "Plataforma Eleitoral": 2,
+      "WhatsApp Channel": 2
+    },
+    "top_emojis_frequency": {
+      "👍": 75,
+      "❤": 72,
+      "😂": 62,
+      "🙏": 61,
+      "😢": 18,
+      "😮": 16
+    }
+  }
+]

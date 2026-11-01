@@ -1,0 +1,73 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BRASNAM 2026 Election Collector//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Coletas BRASNAM 2026 (2o Turno)
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VEVENT
+UID:brasnam2026-coleta1@antigravity.local
+DTSTAMP:20261023T220800Z
+DTSTART:20261023T234500
+DTEND:20261024T000500
+SUMMARY:📊 [BRASNAM #1] Coleta Pós-Debate Globo + Histórico 2o Turno
+DESCRIPTION:Extrair JSON dos 2 canais após o debate da Globo (rolar até 05/10 ou 18/10).\n\n1) Exército do Lula: https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y\n2) Tropa do Flávio: https://whatsapp.com/channel/0029Vb8kT6E3AzNNDpBkN22J\nScript: C:\Users\alkaw\.gemini\antigravity\scratch\brasnam-eleicoes-2026\scraper\whatsapp_channel_extractor.js
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Lembrete Coleta BRASNAM #1 (Pós-Debate)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:brasnam2026-coleta2@antigravity.local
+DTSTAMP:20261023T220800Z
+DTSTART:20261024T230000
+DTEND:20261024T232000
+SUMMARY:📊 [BRASNAM #2] Coleta Fechamento de Campanha / Fim da Live 24h
+DESCRIPTION:Extrair JSON de véspera eleitoral (fim da Live de 24h e fim do prazo Fiscais PL).\n\n1) Exército do Lula: https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y\n2) Tropa do Flávio: https://whatsapp.com/channel/0029Vb8kT6E3AzNNDpBkN22J
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Lembrete Coleta BRASNAM #2 (Véspera Eleitoral)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:brasnam2026-coleta3@antigravity.local
+DTSTAMP:20261023T220800Z
+DTSTART:20261025T170000
+DTEND:20261025T171500
+SUMMARY:📊 [BRASNAM #3] Coleta Fechamento das Urnas (Pré-Apuração 17h)
+DESCRIPTION:Snapshot exato às 17h00 (fechamento das urnas, antes da divulgação dos números do TSE) para capturar mobilização do dia da votação.\n\n1) Exército do Lula: https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y\n2) Tropa do Flávio: https://whatsapp.com/channel/0029Vb8kT6E3AzNNDpBkN22J
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Lembrete Coleta BRASNAM #3 (17h Fechamento das Urnas)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:brasnam2026-coleta4@antigravity.local
+DTSTAMP:20261023T220800Z
+DTSTART:20261025T213000
+DTEND:20261025T215000
+SUMMARY:📊 [BRASNAM #4] Coleta Pós-Resultado Oficial TSE (Choque das Urnas)
+DESCRIPTION:Extrair JSON logo após o anúncio oficial do resultado pelo TSE para medir a reação imediata da tropa vencedora vs. tropa derrotada.\n\n1) Exército do Lula: https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y\n2) Tropa do Flávio: https://whatsapp.com/channel/0029Vb8kT6E3AzNNDpBkN22J
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Lembrete Coleta BRASNAM #4 (Pós-Resultado TSE)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:brasnam2026-coleta5@antigravity.local
+DTSTAMP:20261023T220800Z
+DTSTART:20261027T210000
+DTEND:20261027T212000
+SUMMARY:📊 [BRASNAM #5] Coleta Final (48h Pós-Eleição — Consolidação)
+DESCRIPTION:Coleta final do dataset (48h após o resultado das urnas) para consolidar todas as mensagens e reações acumuladas.\n\n1) Exército do Lula: https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y\n2) Tropa do Flávio: https://whatsapp.com/channel/0029Vb8kT6E3AzNNDpBkN22J
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Lembrete Coleta BRASNAM #5 (Fechamento 48h Pós-Eleição)
+END:VALARM
+END:VEVENT
+END:VCALENDAR

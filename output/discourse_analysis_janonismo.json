@@ -1,0 +1,848 @@
+{
+  "summary": "Análise Comparativa de Discurso e Framing: Janonismo Cultural vs. Tropa do Flávio",
+  "dataset_date": "29/10/2026",
+  "exercito_do_lula": {
+    "channel_name": "EXÉRCITO DO LULA",
+    "total_messages": 1182,
+    "total_words": 16037,
+    "vocabulary_size": 2660,
+    "top_keywords": [
+      [
+        "mil",
+        367
+      ],
+      [
+        "instagram",
+        208
+      ],
+      [
+        "lula",
+        183
+      ],
+      [
+        "pra",
+        120
+      ],
+      [
+        "canal",
+        114
+      ],
+      [
+        "brasil",
+        90
+      ],
+      [
+        "exército",
+        85
+      ],
+      [
+        "agora",
+        81
+      ],
+      [
+        "janones",
+        80
+      ],
+      [
+        "atualização",
+        68
+      ],
+      [
+        "aqui",
+        62
+      ],
+      [
+        "vou",
+        60
+      ],
+      [
+        "rede",
+        53
+      ],
+      [
+        "vai",
+        49
+      ],
+      [
+        "silva",
+        48
+      ],
+      [
+        "subam",
+        48
+      ],
+      [
+        "andré",
+        47
+      ],
+      [
+        "luiz",
+        46
+      ],
+      [
+        "federação",
+        46
+      ],
+      [
+        "psol",
+        46
+      ],
+      [
+        "celular",
+        45
+      ],
+      [
+        "todos",
+        43
+      ],
+      [
+        "presidente",
+        41
+      ],
+      [
+        "possível",
+        40
+      ],
+      [
+        "flávio",
+        40
+      ],
+      [
+        "recebeu",
+        39
+      ],
+      [
+        "milhões",
+        38
+      ],
+      [
+        "acessar",
+        35
+      ],
+      [
+        "live",
+        34
+      ],
+      [
+        "carregá",
+        34
+      ]
+    ],
+    "top_bigrams": [
+      [
+        "mil mil",
+        113
+      ],
+      [
+        "exército lula",
+        51
+      ],
+      [
+        "psol rede",
+        46
+      ],
+      [
+        "lula silva",
+        45
+      ],
+      [
+        "andré janones",
+        44
+      ],
+      [
+        "recebeu atualização",
+        34
+      ],
+      [
+        "atualização canal",
+        34
+      ],
+      [
+        "canal possível",
+        34
+      ],
+      [
+        "possível carregá",
+        34
+      ],
+      [
+        "carregá use",
+        34
+      ],
+      [
+        "use celular",
+        34
+      ],
+      [
+        "celular acessar",
+        34
+      ],
+      [
+        "acessar atualização",
+        34
+      ],
+      [
+        "atualização clique",
+        34
+      ],
+      [
+        "clique atualizar",
+        34
+      ],
+      [
+        "luiz ina",
+        31
+      ],
+      [
+        "ina cio",
+        31
+      ],
+      [
+        "cio lula",
+        31
+      ],
+      [
+        "silva instagram",
+        26
+      ],
+      [
+        "pronto pra",
+        24
+      ]
+    ],
+    "top_trigrams": [
+      [
+        "recebeu atualização canal",
+        34
+      ],
+      [
+        "atualização canal possível",
+        34
+      ],
+      [
+        "canal possível carregá",
+        34
+      ],
+      [
+        "possível carregá use",
+        34
+      ],
+      [
+        "carregá use celular",
+        34
+      ],
+      [
+        "use celular acessar",
+        34
+      ],
+      [
+        "celular acessar atualização",
+        34
+      ],
+      [
+        "acessar atualização clique",
+        34
+      ],
+      [
+        "atualização clique atualizar",
+        34
+      ],
+      [
+        "luiz ina cio",
+        31
+      ],
+      [
+        "ina cio lula",
+        31
+      ],
+      [
+        "cio lula silva",
+        31
+      ],
+      [
+        "lula silva instagram",
+        25
+      ],
+      [
+        "propaganda eleitoral coligação",
+        23
+      ],
+      [
+        "eleitoral coligação brasil",
+        23
+      ]
+    ],
+    "framing_categories": {
+      "Militarismo_e_Comando": {
+        "messages_count": 129,
+        "percentage": 10.91,
+        "total_occurrences": 165
+      },
+      "Urgencia_e_Panico": {
+        "messages_count": 176,
+        "percentage": 14.89,
+        "total_occurrences": 194
+      },
+      "Primeira_Pessoa_Parassocial": {
+        "messages_count": 90,
+        "percentage": 7.61,
+        "total_occurrences": 126
+      },
+      "Guerrilha_e_Inimigo": {
+        "messages_count": 40,
+        "percentage": 3.38,
+        "total_occurrences": 66
+      },
+      "Gamificacao_e_Metas": {
+        "messages_count": 77,
+        "percentage": 6.51,
+        "total_occurrences": 99
+      },
+      "Verbos_Imperativos_Acao": {
+        "messages_count": 73,
+        "percentage": 6.18,
+        "total_occurrences": 75
+      }
+    },
+    "notable_quotes": {
+      "Militarismo_e_Comando": [
+        {
+          "timestamp": "23/10/2026",
+          "text": "Quando eu pousar quero ser surpreendido com a notícia de que chegamos em 10 milhões de soldados"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "RECRUTAR MAIS SOLDADOS"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "EXÉRCITO DO LULA Canal • 9,8 mi seguidores • Canal do EXÉRCITO DO LULA no WhatsApp! Ative o sininho para receber as missões! https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y 17:34"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "EXÉRCITO DO LULA Canal • 9,8 mi seguidores • Canal do EXÉRCITO DO LULA no WhatsApp! Ative o sininho para receber as missões! https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y 17:34"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "EXÉRCITO DO LULA Canal • 9,8 mi seguidores • Canal do EXÉRCITO DO LULA no WhatsApp! Ative o sininho para receber as missões! https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y 17:34"
+        }
+      ],
+      "Urgencia_e_Panico": [
+        {
+          "timestamp": "23/10/2026",
+          "text": "André Janones no Instagram: \"URGENTE! QUEREM NOS CALAR!!\" www.instagram.com"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "André Janones no Instagram: \"AGORA É OFICIAL! O EXÉRCITO DO LULA FICA! \" www.instagram.com"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "A gente tem agora 4 horas apenas pra trazer 300 mil pessoas e chegarmos a 10 milhões  ! Não parem por favor! Estamos quase lá !"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "André Janones no Instagram: \"URGENTE! NOS AJUDEM A COMBATER ESSA FAKE NEWS! \" www.instagram.com"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "Assim que o debate terminar , eu já vou estar no estúdio onde ocorrerá a live"
+        }
+      ],
+      "Primeira_Pessoa_Parassocial": [
+        {
+          "timestamp": "23/10/2026",
+          "text": "Quando eu pousar quero ser surpreendido com a notícia de que chegamos em 10 milhões de soldados"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "Só mais um detalhe : vocês ficarão comigo das 20:00 de hoje até amanhã 23:00 da noite"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "Façam desse o vídeo mais CURTIDO DA MINHA VIDA!"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "O próximo áudio será o mais importante da minha vida"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "Tá vendo eu toda hora mexendo no celular ?"
+        }
+      ],
+      "Guerrilha_e_Inimigo": [
+        {
+          "timestamp": "22/10/2026",
+          "text": "André Janones no Instagram: \"URGENTE! NOS AJUDEM A COMBATER ESSA FAKE NEWS! \" www.instagram.com"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "Movimento 342 Artes | Cultura e Democracia no Instagram: \"Quem pesquisou “Bolsonaro mandou matar o Lula” no Google, em teste realizado pelo ICL Notícias, encontrou uma situação curiosa: a plataforma não exibiu sua resposta automática de inteligência artificial e colocou no topo dos resultados uma reportagem que atacava o deputado André Janones (Rede-MG) por incentivar justamente essa pesquisa. Quando o nome de Bolsonaro foi substituído por outros, a ferramenta de IA voltou a aparecer. A reportagem destacada pelo buscador é, inclusive, crítica ao movimento iniciado pelo deputado e tem o título “Jogada suja de Janones dissemina busca que associa Bolsonaro a plano de morte contra Lula”. Ou seja, em vez de encontrar logo de início uma explicação sobre o plano de assassinato investigado pela Polícia Federal, o usuário recebeu como primeiro resultado uma crítica à mobilização que levou o assunto ao Google.  O teste foi feito depois que Janones orientou apoiadores do presidente Luiz Inácio Lula da Silva a pesquisar a frase. Ao repetir a consulta com nomes como “João” e “Cleber” no lugar de Bolsonaro, o ICL observou que o Google passou a oferecer respostas automáticas de inteligência artificial.  A diferença envolve um assunto que já foi examinado pelo Supremo Tribunal Federal (STF). Bolsonaro foi condenado a 27 anos e três meses de prisão por liderar a organização criminosa responsável pela tentativa de golpe de Estado após as eleições de 2022. Entre os planos identificados nas investigações estava o Punhal Verde e Amarelo, que previa o assassinato de Lula, do vice-presidente Geraldo Alckmin e do ministro Alexandre de Moraes.  Via: ICL Notícias\" www.instagram.com"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "Joguem todos no Google : Bolsonaro Talvane Albuquerque"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "Vocês vão pedir pra TODO mundo jogar isso no Google: Bolsonaro Tavane Albuquerque! Da mesma forma que orientei já : sem manifestar opinião nenhuma e de forma que gere muita curiosidade!"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "E o principal: quase ninguém tá pesquisando nem pedindo pra  pesquisar sobre : Flávio esquema pandemia"
+        }
+      ],
+      "Gamificacao_e_Metas": [
+        {
+          "timestamp": "23/10/2026",
+          "text": "Quando eu pousar quero ser surpreendido com a notícia de que chegamos em 10 milhões de soldados"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "André Janones no Instagram: \"EXPLODE!!! SOMOS 10 MILHÕES DE LUIZES INACIOS LULAS DA SILVA!!!\" www.instagram.com"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "EXÉRCITO DO LULA Canal • 9,8 mi seguidores • Canal do EXÉRCITO DO LULA no WhatsApp! Ative o sininho para receber as missões! https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y 17:34"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "EXÉRCITO DO LULA Canal • 9,8 mi seguidores • Canal do EXÉRCITO DO LULA no WhatsApp! Ative o sininho para receber as missões! https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y 17:34"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "EXÉRCITO DO LULA Canal • 9,8 mi seguidores • Canal do EXÉRCITO DO LULA no WhatsApp! Ative o sininho para receber as missões! https://whatsapp.com/channel/0029VbCbRfD7tkj88k3soZ0Y 17:34"
+        }
+      ],
+      "Verbos_Imperativos_Acao": [
+        {
+          "timestamp": "23/10/2026",
+          "text": "Sobre a live de ontem ! Subam todos:"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "Assistam até o final e se você também quiser assinar esse pedido de desculpas você vai curti e comentar"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "Joguem todos no Google : Bolsonaro Talvane Albuquerque"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "E vejam o que acontece"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "Assistam até o final pra verem qual era a meta"
+        }
+      ]
+    }
+  },
+  "tropa_do_flavio": {
+    "channel_name": "TROPA DO FLÁVIO 🇧🇷",
+    "total_messages": 149,
+    "total_words": 1866,
+    "vocabulary_size": 481,
+    "top_keywords": [
+      [
+        "instagram",
+        58
+      ],
+      [
+        "mil",
+        46
+      ],
+      [
+        "nikolas",
+        22
+      ],
+      [
+        "ferreira",
+        20
+      ],
+      [
+        "lula",
+        15
+      ],
+      [
+        "brasil",
+        13
+      ],
+      [
+        "flávio",
+        11
+      ],
+      [
+        "nordeste",
+        9
+      ],
+      [
+        "vai",
+        7
+      ],
+      [
+        "bolsonaro",
+        7
+      ],
+      [
+        "agora",
+        7
+      ],
+      [
+        "voz",
+        7
+      ],
+      [
+        "pra",
+        6
+      ],
+      [
+        "petista",
+        6
+      ],
+      [
+        "ninguém",
+        6
+      ],
+      [
+        "vote",
+        6
+      ],
+      [
+        "dia",
+        5
+      ],
+      [
+        "vencer",
+        5
+      ],
+      [
+        "todo",
+        5
+      ],
+      [
+        "compartilhe",
+        5
+      ],
+      [
+        "quero",
+        5
+      ],
+      [
+        "lucas",
+        5
+      ],
+      [
+        "pavanato",
+        5
+      ],
+      [
+        "canal",
+        5
+      ],
+      [
+        "dar",
+        4
+      ],
+      [
+        "vivo",
+        4
+      ],
+      [
+        "fortaleza",
+        4
+      ],
+      [
+        "partido",
+        4
+      ],
+      [
+        "liberal",
+        4
+      ],
+      [
+        "campanha",
+        4
+      ]
+    ],
+    "top_bigrams": [
+      [
+        "nikolas ferreira",
+        20
+      ],
+      [
+        "ferreira instagram",
+        17
+      ],
+      [
+        "flávio bolsonaro",
+        7
+      ],
+      [
+        "mil mil",
+        5
+      ],
+      [
+        "lucas pavanato",
+        5
+      ],
+      [
+        "pavanato instagram",
+        5
+      ],
+      [
+        "partido liberal",
+        4
+      ],
+      [
+        "brasil vai",
+        4
+      ],
+      [
+        "vai vencer",
+        4
+      ],
+      [
+        "ninguém cala",
+        4
+      ],
+      [
+        "gustavo gayer",
+        3
+      ],
+      [
+        "gayer instagram",
+        3
+      ],
+      [
+        "nordeste esquecido",
+        3
+      ],
+      [
+        "cala nordeste",
+        3
+      ],
+      [
+        "quero ouvir",
+        3
+      ],
+      [
+        "siga lucaspavanato",
+        3
+      ],
+      [
+        "lucaspavanato instagram",
+        3
+      ],
+      [
+        "conteúdo mil",
+        3
+      ],
+      [
+        "vote flávio",
+        3
+      ],
+      [
+        "flávio instagram",
+        2
+      ]
+    ],
+    "top_trigrams": [
+      [
+        "nikolas ferreira instagram",
+        17
+      ],
+      [
+        "lucas pavanato instagram",
+        5
+      ],
+      [
+        "brasil vai vencer",
+        4
+      ],
+      [
+        "gustavo gayer instagram",
+        3
+      ],
+      [
+        "ninguém cala nordeste",
+        3
+      ],
+      [
+        "siga lucaspavanato instagram",
+        3
+      ],
+      [
+        "claudio dantas claudio_dantas_",
+        2
+      ],
+      [
+        "dantas claudio_dantas_ janjalula",
+        2
+      ],
+      [
+        "partido liberal eleições",
+        2
+      ],
+      [
+        "liberal eleições 2026",
+        2
+      ],
+      [
+        "botar tag primeiro",
+        2
+      ],
+      [
+        "tag primeiro lugar",
+        2
+      ],
+      [
+        "ferreira instagram nordeste",
+        2
+      ],
+      [
+        "instagram nordeste esquecido",
+        2
+      ],
+      [
+        "nordeste esquecido instagram",
+        2
+      ]
+    ],
+    "framing_categories": {
+      "Militarismo_e_Comando": {
+        "messages_count": 3,
+        "percentage": 2.01,
+        "total_occurrences": 3
+      },
+      "Urgencia_e_Panico": {
+        "messages_count": 9,
+        "percentage": 6.04,
+        "total_occurrences": 11
+      },
+      "Primeira_Pessoa_Parassocial": {
+        "messages_count": 8,
+        "percentage": 5.37,
+        "total_occurrences": 12
+      },
+      "Guerrilha_e_Inimigo": {
+        "messages_count": 11,
+        "percentage": 7.38,
+        "total_occurrences": 17
+      },
+      "Gamificacao_e_Metas": {
+        "messages_count": 3,
+        "percentage": 2.01,
+        "total_occurrences": 3
+      },
+      "Verbos_Imperativos_Acao": {
+        "messages_count": 1,
+        "percentage": 0.67,
+        "total_occurrences": 1
+      }
+    },
+    "notable_quotes": {
+      "Militarismo_e_Comando": [
+        {
+          "timestamp": "22/10/2026",
+          "text": "Partido Liberal | PL22 no Instagram: \" A RAVE DO LULA ESTÁ DE VOLTA!  Dessa vez, a letra é feita com as coisas absurdas que ele vive dizendo!   Aproveite o som e encaminhe para os amigos indecisos!   Agora é hora de intensificar a campanha e virar votos até o dia da eleição. Essa é a missão de cada um de nós!  CHEGA DE LULA! CHEGA DESSA MALDIÇÃO CHAMADA PT!   O Brasil vai vencer! E só há um caminho: Flávio Bolsonaro \" www.instagram.com"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "MISSÃO   Botar essa TAG em primeiro lugar no X  Todo mundo junto agora 15:03"
+        },
+        {
+          "timestamp": "19/10/2026",
+          "text": "Galera  A esquerda está batendo forte nessa Fake News sobre o Bolsa Família  Temos que disparar esse vídeo pra todo Brasil agora  e postar nas nossas redes   MISSÃO"
+        }
+      ],
+      "Urgencia_e_Panico": [
+        {
+          "timestamp": "22/10/2026",
+          "text": "Partido Liberal | PL22 no Instagram: \" A RAVE DO LULA ESTÁ DE VOLTA!  Dessa vez, a letra é feita com as coisas absurdas que ele vive dizendo!   Aproveite o som e encaminhe para os amigos indecisos!   Agora é hora de intensificar a campanha e virar votos até o dia da eleição. Essa é a missão de cada um de nós!  CHEGA DE LULA! CHEGA DESSA MALDIÇÃO CHAMADA PT!   O Brasil vai vencer! E só há um caminho: Flávio Bolsonaro \" www.instagram.com"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "Gustavo Gayer on Instagram: \"URGENTE URGENTE URGENTE E dessa vez não é brincadeira Assista esse vídeo para combatermos a MAIOR FAKE NEWS do LULA até agora LULA está tentando enganar o povo com a sua \"quebra de sigillo\" Precisamos resgatar a verdade\" www.instagram.com"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "Seja fiscal de urna · Cadastro do Partido Liberal · Eleições 2026 Cadastre-se para ser fiscal de urna do Partido Liberal nas eleições de 2026. Cadastro rápido: nome, WhatsApp, estado e município. Prazo final: 24 de outubro. fiscaisdopl.com.br"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "MISSÃO   Botar essa TAG em primeiro lugar no X  Todo mundo junto agora 15:03"
+        },
+        {
+          "timestamp": "19/10/2026",
+          "text": "Nikolas Ferreira - Oficial  Canal • 77 mil seguidores •  *ATIVE A NOTIFICAÇÃO AGORA*  É bem rápido. Leva 10 segundinhos:   *Toque no nome do canal aqui em cima*  *Toque em Notificações*  Selecione a opção de *_ativar a notificação_*  _O presente é deles mas o futuro é nosso._  Esse é o canal oficial do *Nikolas Ferreira*. É aqui que ele terá uma comunicação direta com você.   Compartilhe esse canal com todo mundo!   Temos que nos manter unidos nesse momento importante do nosso país  https://whatsapp.com/channel/0029VbDNtfo4o7qVYbwemy1f 10:48"
+        }
+      ],
+      "Primeira_Pessoa_Parassocial": [
+        {
+          "timestamp": "21/10/2026",
+          "text": "Claudio Dantas (@claudio_dantas_) no X Oi @JanjaLula Lembra daqui? Eu conto ou vc conta? x.com"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "Gustavo Gayer no Instagram: \"FIZ O CÁLCULO EXATO - Saiba quantos VOTOS faltam para VENCERMOS ESSE ELEIÇAO\" www.instagram.com"
+        },
+        {
+          "timestamp": "20/10/2026",
+          "text": "O Rubel está calando a voz de uma nordestina por birra ideológica comigo. Ainda dá tempo de autorizar o áudio no meu vídeo. 19:41"
+        },
+        {
+          "timestamp": "21/10/2026",
+          "text": "Nordestino, eu quero falar com você.     Ontem tentaram te calar. Mas hoje eu abro minha rede para que a sua voz seja ouvida!    Eu quero conhecer a sua realidade. Quero ouvir os seus sonhos e conhecer as dores da sua família!    Mostra sua casa, sua rua, conta suas dificuldades. Fala da luta por um emprego, dos sonhos adiados, da saudade de quem precisou partir em busca de oportunidades.    O que falta para a prosperidade chegar à sua família? O que você sonha para o futuro dos seus filhos?    Eu quero ouvir a sua história, com a sua própria voz!    Grave seu vídeo, me marque! Eu vou compartilhar e te dar voz!     Eu quero ouvir o seu grito de liberdade e que o Brasil inteiro conheça a sua realidade! 11:15"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "Lucas Pavanato on Instagram: \"Lula tá gagá ou disse o que pensa?  Siga @lucaspavanato\" www.instagram.com"
+        }
+      ],
+      "Guerrilha_e_Inimigo": [
+        {
+          "timestamp": "21/10/2026",
+          "text": "Gustavo Gayer on Instagram: \"JOGADA DE MESTRE! Flávio aceita o desafio do LULA e ainda DOBRA A APOSTA Dia 25 vai dar Flávio 22\" www.instagram.com"
+        },
+        {
+          "timestamp": "21/10/2026",
+          "text": "AO VIVO EM FORTALEZA: Flávio Bolsonaro e André Fernandes no Bloco do 22 | Arena Castelão  AO VIVO — BLOCO DO 22 EM FORTALEZA, CEARÁAcompanhe a transmissã... www.youtube.com"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "Partido Liberal | PL22 no Instagram: \" A RAVE DO LULA ESTÁ DE VOLTA!  Dessa vez, a letra é feita com as coisas absurdas que ele vive dizendo!   Aproveite o som e encaminhe para os amigos indecisos!   Agora é hora de intensificar a campanha e virar votos até o dia da eleição. Essa é a missão de cada um de nós!  CHEGA DE LULA! CHEGA DESSA MALDIÇÃO CHAMADA PT!   O Brasil vai vencer! E só há um caminho: Flávio Bolsonaro \" www.instagram.com"
+        },
+        {
+          "timestamp": "22/10/2026",
+          "text": "Gustavo Gayer on Instagram: \"URGENTE URGENTE URGENTE E dessa vez não é brincadeira Assista esse vídeo para combatermos a MAIOR FAKE NEWS do LULA até agora LULA está tentando enganar o povo com a sua \"quebra de sigillo\" Precisamos resgatar a verdade\" www.instagram.com"
+        },
+        {
+          "timestamp": "23/10/2026",
+          "text": "Último programa eleitoral da campanha do Flávio. 08:37"
+        }
+      ],
+      "Gamificacao_e_Metas": [
+        {
+          "timestamp": "20/10/2026",
+          "text": "70 milhões silenciados. 16:41"
+        },
+        {
+          "timestamp": "21/10/2026",
+          "text": "148 milhões em 24 horas. Tudo isso sem áudio. Mas a rua ninguém cala.    Te espero hoje em São Luís/MA, 19hrs - Praça Maria Aragão 12:12"
+        },
+        {
+          "timestamp": "19/10/2026",
+          "text": "Nikolas Ferreira - Oficial  Canal • 77 mil seguidores •  *ATIVE A NOTIFICAÇÃO AGORA*  É bem rápido. Leva 10 segundinhos:   *Toque no nome do canal aqui em cima*  *Toque em Notificações*  Selecione a opção de *_ativar a notificação_*  _O presente é deles mas o futuro é nosso._  Esse é o canal oficial do *Nikolas Ferreira*. É aqui que ele terá uma comunicação direta com você.   Compartilhe esse canal com todo mundo!   Temos que nos manter unidos nesse momento importante do nosso país  https://whatsapp.com/channel/0029VbDNtfo4o7qVYbwemy1f 10:48"
+        }
+      ],
+      "Verbos_Imperativos_Acao": [
+        {
+          "timestamp": "20/10/2026",
+          "text": "Subam no Twitter:    NÃO CALEM OS NORDESTINOS"
+        }
+      ]
+    }
+  }
+}
