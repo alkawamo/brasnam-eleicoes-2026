@@ -23,6 +23,6 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Research Manuscripts and Pre-submission Archives
+# Research Manuscripts / Pre-submission Archives
 papers/
 *.zip

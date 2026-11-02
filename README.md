@@ -95,8 +95,8 @@ Caso utilize estes dados ou scripts em pesquisas acadêmicas, favor citar:
 
 ```bibtex
 @misc{kawamoto2026_whatsapp_dataset,
-  author       = {Andr{\'e} Luiz Satoshi Kawamoto},
-  title        = {Dataset e Pipeline de An{\'a}lise de Canais de Transmiss{\~a}o do WhatsApp: 2º Turno das Elei{\c{c}}{\~o}es Presidenciais de 2026},
+  author       = {Andr{'e} Luiz Satoshi Kawamoto},
+  title        = {Dataset e Pipeline de An{'a}lise de Canais de Transmiss{\~a}o do WhatsApp: 2º Turno das Elei{\c{c}}{\~o}es Presidenciais de 2026},
   year         = {2026},
   publisher    = {GitHub},
   howpublished = {\url{https://github.com/alkawamo/brasnam-eleicoes-2026}}
