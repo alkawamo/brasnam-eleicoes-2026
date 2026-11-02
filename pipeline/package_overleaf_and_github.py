@@ -64,6 +64,10 @@ chrome_profile/
 Thumbs.db
 .vscode/
 .idea/
+
+# Research Manuscripts / Pre-submission Archives
+papers/
+*.zip
 """)
     print(f"[OK] Criado: {gitignore_path}")
 
@@ -76,27 +80,13 @@ Thumbs.db
 [![Código: MIT](https://img.shields.io/badge/Code_License-MIT-green.svg)](LICENSE)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-brightgreen.svg)](https://www.python.org/)
 
-Repositório oficial com os scripts de extração, bases de dados longitudinais consolidadas, análises de redes e pacotes de replicação para as pesquisas sobre os **Canais de Transmissão do WhatsApp (*WhatsApp Channels*)** no 2º turno das Eleições Presidenciais Brasileiras de 2026.
+Repositório de dados abertos e pipeline computacional para coleta, processamento, análise estrutural de redes e modelagem temporal dos **Canais de Transmissão do WhatsApp (*WhatsApp Channels*)** durante o 2º turno das Eleições Presidenciais Brasileiras de 2026.
 
-**Autor Principal / Pesquisador Responsável:**  
+**Pesquisador Responsável:**  
 Prof. Dr. **André Luiz Satoshi Kawamoto**  
 *Departamento Acadêmico de Computação (DACOM)*  
 *Universidade Tecnológica Federal do Paraná (UTFPR) — Campus Campo Mourão*  
 Contato: `kawamoto@utfpr.edu.br`
-
----
-
-## 📚 Publicações Vinculadas
-
-1. **Artigo 1 (BraSNAM / SBC 2026):**  
-   *“Ative o Sininho para Receber as Missões”: Topologia Bipartida, Reconstrução Forense de Audiência e Efeito Spillover em Canais de Mobilização no WhatsApp nas Eleições de 2026.*  
-   *Veículo:* Anais do XIV Brazilian Workshop on Social Network Analysis and Mining (BraSNAM / CSBC).
-   *Pacote Overleaf:* [`papers/overleaf_brasnam_sbc.zip`](papers/overleaf_brasnam_sbc.zip)
-
-2. **Artigo 2 (Elsevier OSNEM - Q1):**  
-   *Weaponizing Broadcast Channels: Command-and-Control Mobilization, Search Engine Manipulation, and Judicial AI Regulation in Brazil's 2026 Presidential Runoff.*  
-   *Veículo:* Online Social Networks and Media (OSNEM), Elsevier.
-   *Pacote Overleaf:* [`papers/overleaf_elsevier_osnem.zip`](papers/overleaf_elsevier_osnem.zip)
 
 ---
 
@@ -117,11 +107,6 @@ Contato: `kawamoto@utfpr.edu.br`
 │   └── generate_streamgraph.py           # Motor temporal do Streamgraph (ThemeRiver)
 ├── scraper/                              # Extratores de DOM do WhatsApp Web
 │   └── whatsapp_channel_extractor.js     # Script de injeção no DOM para captura retroativa
-├── papers/                               # Manuscritos científicos e pacotes Overleaf
-│   ├── paper1_brasnam_sbc/               # Artigo BraSNAM (LaTeX, .bib, template SBC e PDF)
-│   ├── paper2_elsevier_osnem/            # Artigo Elsevier OSNEM (LaTeX, .bib e PDF)
-│   ├── overleaf_brasnam_sbc.zip          # Arquivo ZIP pronto para 1-clique no Overleaf
-│   └── overleaf_elsevier_osnem.zip       # Arquivo ZIP pronto para 1-clique no Overleaf
 └── output/                               # Resultados estruturados (JSON, CSVs de grafo e relatórios)
     ├── bipartite_graph_edges.csv         # Arestas ponderadas do grafo bipartido C2 -> Alvos
     ├── brasnam_comparative_summary.json  # Métricas estruturais comparadas
@@ -143,7 +128,7 @@ Contato: `kawamoto@utfpr.edu.br`
 | `datetime_utc` | String | Timestamp ISO normalizado UTC |
 | `mission_type` | String | Classificação na taxonomia tática de 8 dimensões de comando |
 | `text` | String | Texto integral da mensagem |
-| `links` | String | Lista delimitada por pipe (`\|`) de hiperlinks externos |
+| `links` | String | Lista delimitada por pipe (`\\|`) de hiperlinks externos |
 | `hashtags` | String | Lista delimitada por pipe de hashtags identificadas |
 | `has_media` | Boolean | Indicador de presença de anexos multimídia |
 | `has_video` | Boolean | Presença de mídia em formato de vídeo |
@@ -162,7 +147,7 @@ Contato: `kawamoto@utfpr.edu.br`
 
 ### 1. Clonar o repositório e instalar dependências
 ```bash
-git clone https://github.com/kawamoto-utfpr/brasnam-eleicoes-2026.git
+git clone https://github.com/alkawamo/brasnam-eleicoes-2026.git
 cd brasnam-eleicoes-2026
 pip install -r requirements.txt
 ```
@@ -179,23 +164,17 @@ python pipeline/analyze_discourse.py
 
 ---
 
-## 📝 Como Citar
+## 📝 Como Citar este Repositório / Dataset
+
+Caso utilize estes dados ou scripts em pesquisas acadêmicas, favor citar:
 
 ```bibtex
-@inproceedings{kawamoto2026brasnam,
-  author    = {Andr{\'e} Luiz Satoshi Kawamoto},
-  title     = {``Ative o Sininho para Receber as Miss{\~o}es'': Topologia Bipartida, Reconstru{\c{c}}{\~a}o Forense de Audi{\^e}ncia e Efeito Spillover em Canais de Mobiliza{\c{c}}{\~a}o no {WhatsApp} nas Elei{\c{c}}{\~o}es de 2026},
-  booktitle = {Anais do XIV Brazilian Workshop on Social Network Analysis and Mining (BraSNAM / CSBC)},
-  year      = {2026},
-  publisher = {SBC}
-}
-
-@article{kawamoto2026osnem,
-  author    = {Andr{\'e} Luiz Satoshi Kawamoto},
-  title     = {Weaponizing Broadcast Channels: Command-and-Control Mobilization, Search Engine Manipulation, and Judicial AI Regulation in {Brazil}'s 2026 Presidential Runoff},
-  journal   = {Online Social Networks and Media},
-  year      = {2026},
-  publisher = {Elsevier}
+@misc{kawamoto2026_whatsapp_dataset,
+  author       = {Andr{\'e} Luiz Satoshi Kawamoto},
+  title        = {Dataset e Pipeline de An{\'a}lise de Canais de Transmiss{\~a}o do WhatsApp: 2º Turno das Elei{\c{c}}{\~o}es Presidenciais de 2026},
+  year         = {2026},
+  publisher    = {GitHub},
+  howpublished = {\\url{https://github.com/alkawamo/brasnam-eleicoes-2026}}
 }
 ```
 """

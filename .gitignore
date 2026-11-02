@@ -22,3 +22,7 @@ chrome_profile/
 Thumbs.db
 .vscode/
 .idea/
+
+# Research Manuscripts and Pre-submission Archives
+papers/
+*.zip
