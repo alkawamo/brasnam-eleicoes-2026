@@ -427,3 +427,125 @@ if __name__ == "__main__":
     generate_fig2_silent_audience()
     generate_fig3_impulse_response()
     generate_fig4_streamgraph()
+
+
+def generate_fig5_ridgeline():
+    print("[5/5] Generating Fig 5: 14-Day Disaggregated Ridgeline Plot (Joyplot)...")
+    from datetime import datetime
+    from scipy.ndimage import gaussian_filter1d
+
+    def parse_dt(row):
+        d_str = str(row.get('date', '') or '').strip()
+        t_str = str(row.get('time', '') or '').strip()
+        if not d_str or d_str == 'nan' or d_str == '31/12/1969':
+            return None
+        if not re.match(r'^\d{1,2}:\d{2}$', t_str):
+            t_str = "12:00"
+        try:
+            dt = datetime.strptime(f"{d_str} {t_str}", "%d/%m/%Y %H:%M")
+            if dt.year == 2026 and dt.month == 10 and 17 <= dt.day <= 30:
+                return dt
+        except Exception:
+            pass
+        return None
+
+    df['dt'] = df.apply(parse_dt, axis=1)
+    df_valid = df.dropna(subset=['dt']).copy()
+
+    streams = [
+        ("1. Debates, Live Broadcasts &\nElection Night (Band / Globo)", "#1E88E5",
+         ["debate", "band", "globo", "ao vivo", "live", "24h", "24 horas", "24 hs", "estúdio", "estudio",
+          "esquenta", "transmissão", "bonner", "sabatina", "showdolula", "luladandoshow", "respondeolula",
+          "virotedoexercito", "livedavirada", "apuração", "apuracao", "tetra", "intercontinental", "venceu"]),
+        ("2. Algorithmic Warfare, Scarcity\nDrives & TSE/AI Regulation", "#00897B",
+         ["tse", "justiça", "ministro", "conteúdo de ia", "inteligência artificial", "meta ", "alcance",
+          "sininho", "notificações", "notificacao", "inscritos", "seguidores", "10 milhões", "10 milhoes",
+          "9 milhões", "8 milhões", "7 milhões", "5 milhões", "canal fechado", "sair do ar", "suspender",
+          "ninguemcalanossoexercito", "esquerdadominouasredes", "algoritmo", "boicote", "boicotar"]),
+        ("3. Organized Crime & Linkless\nGoogle Bombing (Talvane Case)", "#8E24AA",
+         ["talvane", "tavane", "albuquerque", "mandou matar", "ceci", "miliciano", "milícia", "milicia",
+          "comando vermelho", "facção", "faccao", "crime", "criminoso", "traficante", "tráfico", "pcc",
+          "assassinato", "ana clara", "punhal", "google", "pesquisem", "pesquise", "joguem todos no google"]),
+        ("4. Regional Clash (Northeast /\nRubel Case) & Censorship Claims", "#FB8C00",
+         ["nordeste", "nordestino", "nordestinos", "piauí", "piaui", "fonteles", "ceará", "bahia",
+          "pernambuco", "juazeiro", "petrolina", "rubel", "hermínia", "herminia", "censura", "censurado",
+          "calar", "calaram", "silenciados", "naocalemosnordestino", "falanordeste", "prosperanordeste"]),
+        ("5. Scandals, Pandemic Memory &\nEconomic Rights (Yacht / Secrecy)", "#E53935",
+         ["pandemia", "vacina", "covid", "paulo gustavo", "elespoderiamestarvivos", "inss", "aposentado",
+          "salário", "salario", "mínimo", "lancha", "mansão", "sigilo", "abreosigilo", "rachadinha",
+          "pobre", "fome", "economia", "bolsa família", "onibus de graca", "detergente", "mariana"]),
+        ("6. Street Rallies, Poll-Watchers &\nElection-Day Transit Mobilization", "#F39C12",
+         ["rua", "caminhada", "carreata", "ato ", "paulista", "copacabana", "caetano", "brasília",
+          "verde e amarelo", "vira voto", "urna", "fiscal", "fiscais", "seção", "sessões", "transporte",
+          "ônibus", "onibus", "prorrogação", "estender a votação", "carona solidária", "salvador", "zona leste"]),
+    ]
+
+    start_dt = datetime(2026, 10, 17, 0, 0)
+    bin_hours = 3
+    n_bins = 14 * (24 // bin_hours)
+    raw_counts = np.zeros((len(streams) + 1, n_bins))
+
+    for _, row in df_valid.iterrows():
+        dt = row['dt']
+        ch = str(row['channel'])
+        txt = f"{row.get('text', '')} {row.get('urls', '')} {row.get('hashtags', '')}".lower()
+        b_idx = int((dt - start_dt).total_seconds() // (bin_hours * 3600))
+        if not (0 <= b_idx < n_bins):
+            continue
+        if "FLÁVIO" in ch or "FLAVIO" in ch:
+            raw_counts[-1, b_idx] += 1.0
+        matched = [s_idx for s_idx, (_, _, kws) in enumerate(streams) if any(kw in txt for kw in kws)]
+        if not matched:
+            matched = [1]
+        for s_idx in matched:
+            raw_counts[s_idx, b_idx] += 1.0 / len(matched)
+
+    smooth_counts = np.zeros_like(raw_counts)
+    for i in range(raw_counts.shape[0]):
+        smooth_counts[i] = gaussian_filter1d(raw_counts[i], sigma=1.15, mode='nearest')
+        zero_mask = gaussian_filter1d(raw_counts[i], sigma=0.6, mode='nearest') < 0.02
+        smooth_counts[i, zero_mask] = 0.0
+
+    fig, ax = plt.subplots(figsize=(14.0, 7.6), dpi=300)
+    x = np.linspace(0, 14, n_bins)
+    n_ridges = len(streams) + 1
+    ridge_labels = [s[0] for s in streams] + ["7. Rival C2 Baseline:\nTropa do Flávio (All Topics)"]
+    ridge_colors = [s[1] for s in streams] + ["#37474F"]
+    vertical_spacing = 1.0
+    max_overlap = 1.55
+
+    ax.axvspan(9.0, 14.0, color="#FFFDE7", alpha=0.75, zorder=0)
+    ax.text(11.5, n_ridges * vertical_spacing + 0.45,
+            "120-Hour Post-Election Transition & Churn Window (Oct 26–30)\nLula C2 Demobilizes Gradually vs. Total Freeze in Tropa do Flávio (0 Posts)",
+            ha='center', va='center', fontsize=8.5, fontweight='bold', color='#5D4037',
+            bbox=dict(boxstyle="round,pad=0.3", fc="#FFF9C4", ec="#FBC02D", lw=1.0), zorder=20)
+
+    for i in range(n_ridges):
+        y_base = (n_ridges - 1 - i) * vertical_spacing
+        y_vals = smooth_counts[i]
+        peak_val = max(y_vals.max(), 1.0)
+        scale_factor = (0.55 + 0.45 * np.sqrt(peak_val / smooth_counts.max())) * max_overlap
+        y_norm = (y_vals / peak_val) * scale_factor
+        z = (i + 1) * 2
+        color = ridge_colors[i]
+        ax.fill_between(x, y_base, y_base + y_norm, color="white", alpha=1.0, zorder=z)
+        ax.fill_between(x, y_base, y_base + y_norm, color=color, alpha=0.72, zorder=z+0.1)
+        ax.plot(x, y_base + y_norm, color=color, linewidth=1.8, zorder=z+0.2)
+        ax.axhline(y_base, color="#CCCCCC", linestyle="-", linewidth=0.7, zorder=z-0.1)
+        ax.text(-0.18, y_base + 0.18, ridge_labels[i], ha='right', va='center',
+                fontsize=8.8, fontweight='bold', color=color)
+
+    day_centers = np.arange(0.5, 14.5, 1.0)
+    ax.set_xticks(day_centers)
+    ax.set_xticklabels([f"Oct {17 + d}" for d in range(14)], fontsize=9.2, fontweight='bold')
+    ax.set_xlim(0, 14)
+    ax.set_ylim(-0.15, n_ridges * vertical_spacing + 0.85)
+    ax.set_yticks([])
+    ax.set_xlabel("14-Day Longitudinal Observation Timeline (October 17 to October 30, 2026; 3-Hour Windows, BRT)", fontsize=10, fontweight='bold', labelpad=8)
+    ax.set_title("Longitudinal Ridgeline Anatomy of Tactical Mobilization Waves Across the 14-Day Runoff & Post-Election Window", fontsize=11.5, fontweight='bold', pad=12)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    plt.tight_layout()
+    _save_fig("fig4_ridgeline_14days.png")
+    plt.close()
